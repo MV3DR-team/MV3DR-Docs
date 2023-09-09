@@ -1,8 +1,8 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: 多视觉融合三维重建
+description: 综合设计项目文档
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://MV3DR-team.github.io/MV3DR-Docs
 
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+# aux_links:
+#  Template Repository: https://github.com/MV3DR-team/MV3DR-Docs
