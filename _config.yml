@@ -1,8 +1,29 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: 多视觉融合三维重建平台搭建 | 文档
+description: 综合设计项目文档
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://MV3DR-team.github.io/MV3DR-Docs
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  "Github 项目代码":
+    - "https://github.com/MV3DR-team/Multi-View-3D-Reconstruction"
+
+aux_links_new_tab: true
+
+callouts:
+  warning:
+    title: ❗警告
+    color: red
+  note:
+    title: 📝说明
+    color: green
+  important:
+    title: ❕重要
+    color: purple
+
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "在 Github 上编辑此页"
+gh_edit_repository: "https://github.com/MV3DR-team/MV3DR-Docs" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs is served from
+# gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "tree"

@@ -1,0 +1,17 @@
+<script type="text/x-mathjax-config">
+	var _config = { tex2jax: {
+			inlineMath: [['$','$'], ['\\(','\\)']]
+		}};
+	
+	_config.TeX = { 
+		{%- if _mathjax_autoNumber == true -%}
+		equationNumbers: { autoNumber: "all" },
+		{%- endif -%}
+		extensions: ["mediawiki-texvc.js", "extpfeil.js"]
+	};
+	
+	MathJax.Hub.Config(_config);
+</script>
+<script type="text/javascript" async 
+    src="https://cdn.bootcss.com/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
