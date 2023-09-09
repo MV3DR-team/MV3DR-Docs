@@ -18,7 +18,7 @@ callouts:
     title: 📝说明
     color: green
   important:
-    titile: ❕重要
+    title: ❕重要
     color: purple
 
 gh_edit_link: true # show or hide edit this page link
