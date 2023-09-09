@@ -94,7 +94,7 @@ bundle exec jekyll serve
 1. 最重要的就是 Just the Docs 的[文档](https://just-the-docs.com/)和其 [Github 仓库](https://github.com/just-the-docs/just-the-docs)，如果想修改布局什么的就得学习一下。
 2. 描述算法肯定得写数学公式，建议学习一下 LaTeX 的基本写法，可以参考 [LaTeX 公式保姆级教程 (以及其中的各种细节)](https://www.bilibili.com/video/BV1no4y1U7At)。
 3. [Jekyll 文档](https://www.jekyll.com.cn/docs/)，有些 Just the Docs 文档没说的东西就得在这里面查了。
-4. 后面有什么再补充。
+4. [Github 新手够用指南](https://www.bilibili.com/video/BV1e541137Tc)。
 
 [Jekyll]: https://www.jekyll.com.cn/
 [Just the Docs]: https://just-the-docs.com/

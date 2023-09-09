@@ -48,7 +48,7 @@ nav_order: 0
 
 - [陈乐兮](https://github.com/XLZXLZXLZ)
 - [李俊呈](https://github.com/JcMarical)
-- 李欣怡
-- 王晨宇
+- [李欣怡](https://github.com/lextury)
+- [王晨宇](https://github.com/LEZIMAN)
 - [王祯一](https://github.com/TempContainer)
 - [余丰年](https://github.com/ImOP12138)
