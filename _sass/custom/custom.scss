@@ -6,3 +6,10 @@
       width: 25rem;
     }
   }
+
+  @media (min-width: 66.5rem) {
+    .side-bar {
+      width: calc((100% - 66.5rem) / 2 + 10rem);
+      min-width: 10rem;
+    }
+  }
