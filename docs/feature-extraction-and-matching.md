@@ -25,7 +25,7 @@ nav_order: 11
 
 (在代码中，金字塔的具体层数取决于SIFT构造函数中的参数nOctaveLayers)
 
-<img src="C:\Users\13367\AppData\Roaming\Typora\typora-user-images\image-20230910123311748.png" alt="image-20230910123311748" style="zoom:33%;" /> 
+<img src="Picture\image-20230910123311748.png" alt="image-20230910123311748" style="zoom:25%;" /> 
 
 #### 2.关键点定位
 
@@ -33,7 +33,7 @@ nav_order: 11
 
 随后通过泰勒展开，从这些潜在的离散关键点中复原出连续空间下的真实极值点
 
-<img src="C:\Users\13367\AppData\Roaming\Typora\typora-user-images\image-20230910124111017.png" alt="image-20230910124111017" style="zoom:33%;" />  
+<img src="Picture\image-20230910124111017.png" alt="image-20230910124111017" style="zoom:25%;" /> 
 
 #### 3.噪声过滤与边缘检测
 
@@ -68,7 +68,7 @@ $$
 
 在后续处理中，一个具有主方向和辅方向的点将分别作为不同方向的点参与计算
 
-<img src="C:\Users\13367\AppData\Roaming\Typora\typora-user-images\image-20230910133029778.png" alt="image-20230910133029778" style="zoom:33%;" /> 
+<img src="Picture\image-20230910133029778.png" alt="image-20230910133029778" style="zoom:33%;" /> 
 
 > 待补充
 
@@ -144,7 +144,7 @@ int main()
 
 ### 实现效果
 
-<img src="C:\Users\13367\AppData\Roaming\Typora\typora-user-images\image-20230910121502264.png" alt="image-20230910121502264" style="zoom:67%;" /> 
+<img src="Picture\image-20230910121502264.png" alt="image-20230910121502264" style="zoom: 80%;" /> 
 
 ## 效果分析与参数分析
 
