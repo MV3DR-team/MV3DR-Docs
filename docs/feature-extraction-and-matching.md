@@ -25,7 +25,7 @@ nav_order: 11
 
 (在代码中，金字塔的具体层数取决于SIFT构造函数中的参数nOctaveLayers)
 
-<img src="Picture\image-20230910123311748.png" alt="image-20230910123311748" style="zoom:25%;" /> 
+<img src="Picture\report1\image-20230910123311748.png" alt="image-20230910123311748" style="zoom:25%;" /> 
 
 #### 2.关键点定位
 
@@ -33,7 +33,7 @@ nav_order: 11
 
 随后通过泰勒展开，从这些潜在的离散关键点中复原出连续空间下的真实极值点
 
-<img src="Picture\image-20230910124111017.png" alt="image-20230910124111017" style="zoom:25%;" /> 
+<img src="Picture\report1\image-20230910124111017.png" alt="image-20230910124111017" style="zoom:25%;" /> 
 
 #### 3.噪声过滤与边缘检测
 
@@ -70,13 +70,13 @@ $$
 
 
 
-<img src="Picture\image-20230910133029778.png" alt="image-20230910133029778" style="zoom:33%;" /> 
+<img src="Picture\report1\image-20230910133029778.png" alt="image-20230910133029778" style="zoom:33%;" /> 
 
 选取数值最高的一项作为主方向同时保留多个辅方向，若某个方向的幅值达到主方向的80%，把它作为辅方向（当然直方图的一个柱子也是一个角度范围，具体的角度还需要抛物线插值进行拟合找出角度值）
 
 在构建关键点的描述符时，为了使其具有旋转不变性，首先让该关键点的主方向和X轴重合，再用插值法填满所需邻域
 
-<img src="Picture\20230910152130.png" alt="20230910152130" style="zoom:70%;" /> 
+<img src="Picture\report1\20230910152130.png" alt="20230910152130" style="zoom:70%;" /> 
 
 然后与计算关键点类似，对邻域内每个像素点计算其梯度幅值和幅角，得到关键点的描述符向量
 
@@ -86,7 +86,7 @@ sift算法常用的匹配方法是基于上述特征描述子之间的距离度�
 
 这次实验中我们使用了FLANN匹配器进行特征匹配，其原理为高效近似最近邻匹配。
 
-<img src="Picture\20230910172118.png" alt="20230910172118" style="zoom:40%;" /> 
+<img src="Picture\report1\20230910172118.png" alt="20230910172118" style="zoom:40%;" /> 
 
 这里的比值检测法用于筛选匹配点，提高匹配准确率
 
@@ -160,7 +160,7 @@ int main()
 
 ### 实现效果
 
-<img src="Picture\image-20230910121502264.png" alt="image-20230910121502264" style="zoom: 80%;" /> 
+<img src="Picture\report1\image-20230910121502264.png" alt="image-20230910121502264" style="zoom: 80%;" /> 
 
 ## 效果分析与参数分析
 
@@ -172,3 +172,16 @@ int main()
     edgeThreshold：用于过滤边缘关键点的阈值，默认为10.0。
     sigma：高斯滤波器的初始方差，默认为1.6。
 
+对于不同的参数，以下为不同的实现效果
+
+```
+(1500, 5, 0.02, 8.0, 1.6, false)
+```
+
+<img src="D:\GitHub\MV3DR-Docs\docs\Picture\Report1\图片3.png" alt="图片3" style="zoom:80%;" /> 
+
+```
+(1500, 5, 0.04, 12.0, 1.6, false)
+```
+
+<img src="D:\GitHub\MV3DR-Docs\docs\Picture\Report1\图片4.png" alt="图片4" style="zoom: 67%;" /> 
