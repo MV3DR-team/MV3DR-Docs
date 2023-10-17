@@ -4,7 +4,65 @@
 
 
 
-### 算法概述
+### 算法原理
+
+#### Incremental SFM
+
+增量式（Incremental）SFM是一种基于多视角的三维重建方式
+
+它的运行模式是在三角测量（triangulation）和透视N点（PnP）计算的同时，进行局部捆绑调整（Bundle Adjustment）
+
+相较于传统的全局式SFM，增量式SFM具有更高的鲁棒性，健壮性，当引入不合理的异常图片时，其受到的影响相较于全局式的运动重建，受到的影响更小
+
+但这种每次添加图像后，Incremental SFM都需要进行一次Bundle Adjustment，因而当需要处理的图片量较大时，较大的运算量可能导致其效率较低；同时，由于误差累积的原因，增量式SFM还容易出现"漂移"问题，即在添加图片后，场景中原有的点出现偏移
+
+![1](Picture\Report3\1.png)
+
+
+
+#### Perspective-n-Poin (PnP)
+
+PnP算法是一种通过给定3D点的坐标、对应2D点坐标以及内参矩阵，求解相机的位姿的算法
+
+算法需要从3D向2D映射的点对作为输入参数，如图示的A-a,B-b点等
+
+<img src="Picture\Report3\7.png" alt="7" style="zoom:67%;" /> 
+
+根据相应的归一化约束条件可以获得关于姿态参数的两个方程
+
+PnP算法要求至少存在6对点对用于估计位姿
+
+在相机已校准的前提下，PnP算法可直接使用线性变换:
+
+1. 对于某个点 P = (X, Y, Z, 1)^T，定义增广矩阵 [R|t] 为一个 3 × 4 的矩阵,包含了旋转与平移信息
+
+<img src="Picture\Report3\2.png" alt="2" style="zoom:50%;" />
+
+   2.化简得到约束条件
+
+<img src="Picture\Report3\3.png" alt="3" style="zoom:50%;" />
+
+   3.为简化,定义 T 的行向量，有
+
+<img src="Picture\Report3\4.png" alt="4" style="zoom:50%;" />
+
+<img src="Picture\Report3\5.png" alt="5" style="zoom:50%;" />
+
+  4.进而得到矩阵
+
+<img src="Picture\Report3\6.png" alt="6" style="zoom:67%;" />
+
+ T 共有 12 维，通过提供的6对匹配点，即可实现矩阵 T 的线性求解
+
+#### Bundle Adjustment
+
+
+
+
+
+
+
+### 算法实现
 
 BA算法的核心思想是通过最小化重建误差来优化相机参数和三维点的位置。
 
