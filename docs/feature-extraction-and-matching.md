@@ -50,7 +50,7 @@ H = \begin{bmatrix}
 $$
 过滤Det(H) < 0 和不满足以下公式的点
 $$
-\frac{{\text{Tr}(H)^2}}{{\text{Det}(H)}} < \frac{{(r+1)^2}}{r}
+\frac{\text{Tr}(H)^2}{\text{Det}(H)} < \frac{(r+1)^2}{r}
 $$
 过滤
 
